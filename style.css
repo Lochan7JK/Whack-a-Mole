@@ -1,0 +1,48 @@
+body{
+    font-family: "Pangolin", cursive;
+    text-align: center;
+    background: url("./images/whack\ a\ mole2.jpg");
+    background-size: cover;
+    background-size:100% 100vh;
+    /* background-repeat: no-repeat; */
+}
+body h1{
+    font-size: 50px;
+}
+body h2{
+    font-size: 25px;
+}
+
+#board{
+    width: 540px;
+    height: 540px;
+    /* background-color: yellowgreen; */
+    /* "margin: 0 auto" is used frequently for horizontally centering block-level elements within their parent container by setting the top and bottom margins to 0 and the left and right margins to "auto", which distributes remaining space equally.  */
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    background: url(./images/soil.png);
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+#board div{
+    width: 180px;
+    height: 180px;
+    background-image: url(./images/pipe.png);
+    background-size: cover;
+}
+#board div img{
+    width: 100px;
+    height: 100px;
+    /* One NitPick is that we can still highlight or drag the images of piranha-plant and monty-mole */
+
+    /* Thus, we added these lines of code */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
