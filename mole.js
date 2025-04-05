@@ -14,7 +14,7 @@ function setGame(){
         let tile = document.createElement("div");
         tile.id = i.toString();
 
-        tile.addEventListener("click", selectTile);
+        tile.addEventListener("click", selectTile); // to make every tile clickable
 
         document.getElementById("board").appendChild(tile);
     }
@@ -92,7 +92,32 @@ function selectTile(){
         document.getElementById("score").innerText = score.toString(); // updates the score
     }
     else if(this == currPlantTile){
-        document.getElementById("score").innerText = "GAME OVER: " + score.toString();
+        document.getElementById("score").innerText = "GAME OVER: Score is " + score.toString();
         gameOver = true;
     }
 }
+
+//////// I did this all by myself for the very first time 😭😭😭
+let leftOver = 60;
+
+let timeLeft = setInterval(function (){
+
+    if(gameOver){ 
+        clearInterval(timeLeft);
+        document.getElementById("timer").innerHTML = "⏳Time Left: " + leftOver + " seconds";
+    }
+
+    document.getElementById("timer").innerHTML = "⏳Time Left: " + leftOver + " seconds";
+    leftOver--;
+      
+    if(leftOver < 0){
+        clearInterval(timeLeft);
+        document.getElementById("timer").innerHTML = "Time's Up!"
+        document.getElementById("timer").style.color = "red";
+
+        document.getElementById("score").innerText = "GAME OVER: Your score is " + score.toString();
+        gameOver = true;
+    }
+}, 1000);
+
+
