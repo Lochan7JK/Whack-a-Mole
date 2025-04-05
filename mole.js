@@ -20,7 +20,7 @@ function setGame(){
     }
 
     setInterval(setMole, 1000);
-    setInterval(setPlant, 2000);
+    setInterval(setPlant, 500);
 }
 
 function getRandomTile(){
