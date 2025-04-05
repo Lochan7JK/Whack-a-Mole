@@ -97,7 +97,7 @@ function selectTile(){
     }
 }
 
-//////// I did this all by myself for the very first time 😭😭😭
+
 let leftOver = 60;
 
 let timeLeft = setInterval(function (){
